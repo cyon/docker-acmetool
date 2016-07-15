@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM python:3.5-alpine
 
 MAINTAINER Dominic Luechinger 'dol@cyon.ch'
 
