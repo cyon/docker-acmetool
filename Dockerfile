@@ -9,7 +9,7 @@ RUN apk --no-cache add --virtual .install-deps \
         curl \
         dpkg \
         tar \
-    && ACMETOOL_VERSION='0.0.54' \
+    && ACMETOOL_VERSION='0.0.56' \
     && CPU_ARCH=$(dpkg --print-architecture | awk -F'-' '{print $NF}') \
     && curl -N -L https://github.com/hlandau/acme/releases/download/v${ACMETOOL_VERSION}/acmetool-v${ACMETOOL_VERSION}-linux_${CPU_ARCH}.tar.gz \
     | tar xz \
