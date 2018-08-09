@@ -1,6 +1,6 @@
 # Contributing to acmetool docker image
 
-# Update acmetool version and build docker image
+## Update acmetool version and build docker image
 
 ```
 # Clone repo
@@ -8,5 +8,11 @@
 
 git commit -m 'Updated acmetool to latest version'
 
-docker build -t 'cyon/acmetool:latest' 'cyon/acmetool:<version_number>' .
+docker build -t 'cyon/acmetool:latest' -t 'cyon/acmetool:<version_number>' .
+```
+
+## Publish image to docker hub
+```
+docker push 'cyon/acmetool:latest'
+docker push 'cyon/acmetool:<version_number>'
 ```
