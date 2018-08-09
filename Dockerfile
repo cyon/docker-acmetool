@@ -1,4 +1,4 @@
-FROM python:3.5-alpine
+FROM python:3.8-alpine
 
 MAINTAINER Dominic Luechinger 'dol@cyon.ch'
 
@@ -9,7 +9,7 @@ RUN apk --no-cache add --virtual .install-deps \
         curl \
         dpkg \
         tar \
-    && ACMETOOL_VERSION='0.0.56' \
+    && ACMETOOL_VERSION='0.0.67' \
     && CPU_ARCH=$(dpkg --print-architecture | awk -F'-' '{print $NF}') \
     && curl -N -L https://github.com/hlandau/acme/releases/download/v${ACMETOOL_VERSION}/acmetool-v${ACMETOOL_VERSION}-linux_${CPU_ARCH}.tar.gz \
     | tar xz \
