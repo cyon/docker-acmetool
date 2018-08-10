@@ -23,6 +23,7 @@ RUN apk --no-cache add --virtual .install-deps \
     && rm -rf /var/cache/apk/*
 
 RUN apk add --no-cache \
+        bash \
         ca-certificates \
         su-exec \
     && su-exec acmetool true
